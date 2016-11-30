@@ -1,4 +1,6 @@
 <footer align="center" >
-<p>Fait par ouam</p>
-<%= debug(params) if  Rails.env.developement? %>
+    <p>Fait par des petites mains non chinoises</p>
+    <%= debug(params) if  Rails.env.developement? %>
+    <%= link_to "Contact", contact_path %>
+    <%= link_to "About", about_path %>
 </footer>

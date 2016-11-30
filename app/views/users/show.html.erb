@@ -1,12 +1,13 @@
 <% provide(:title, @user.name) %>
 <%=gravatar_for @user %>
 
+<h1>SHOW</h1>
 
 nom de l'util: <%= @user.name %><br>
- email de l'util: <%= @user.email %>
+email de l'util: <%= @user.email %>
 
 <p>
-(byebug) @user.name "example User"
-(byebug) @user.email  "example@toto.com"
-(byebug params[:id] "1"
+    <!-- (byebug) @user.name "example User"
+    (byebug) @user.email  "example@toto.com"
+    (byebug params[:id] "1" -->
 </p>

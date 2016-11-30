@@ -25,11 +25,6 @@ test "should get home" do
     assert_select "title", "Home #{@titre}"
   end
 
-    test "toto" do
-    get :toto
-    assert_response :success
-    assert_select "title", "Toto #{@titre}"
-  end
 
   test "should get help" do
     get :help

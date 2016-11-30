@@ -3,10 +3,11 @@
 
 body {
 color: maroon;
-font-size: 1em;
+font-size: 2.5em;
 font-family: comfortaa;
 background-color: pink;
 padding-top: 60px;
+text-align: center;
 }
 
 $gray-medium-light: #eaeaea;
@@ -257,4 +258,8 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.btn{
+    font-size: 2em;
 }
