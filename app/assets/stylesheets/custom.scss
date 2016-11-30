@@ -2,10 +2,10 @@
 @import "bootstrap";
 
 body {
-color: maroon;
+color: white;
 font-size: 2.5em;
 font-family: comfortaa;
-background-color: pink;
+background-color: #4B0082; //#483D8B;
 padding-top: 60px;
 text-align: center;
 }
@@ -32,6 +32,7 @@ textarea {
   text-align: center;
   h1 {
     margin-bottom: 10px;
+    color: blue;
   }
 }
 
@@ -46,6 +47,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: blue;
 }
 
 h2 {
@@ -163,6 +165,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  color: black;
 }
 
 input {

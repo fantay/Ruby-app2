@@ -9,6 +9,11 @@ class SessionsController < ApplicationController
         if user
             flash[:sucess] = "Sa marche, #{user.name}"
             log_in user
+            if params[:session][:remember_me] == '1'
+                remember(user)
+            else
+                forget(user)
+            end
             redirect_to user
         else
           flash.now[:danger] = "Ta fais de la MERDE !!!!!"
@@ -17,7 +22,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        log_out
+        log_out if logged_in?
         redirect_to home_path
     end
 
