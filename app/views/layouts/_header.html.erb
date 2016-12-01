@@ -1,29 +1,3 @@
-<!-- <header class="navbar navbar-fixed-top navbar-inverse">
-
-    <div class="container">
-
-        <%=link_to "my_app","#",id: "logo" %>
-        <nav>
-            <ul class="nav navbar-nav navbar-right">
-                <li>  <%=link_to "home", root_path, id: "Home" %> </li>
-                <li>  <%=link_to "about", about_path, id: "About" %> </li>
-                <li>  <%=link_to "help", help_path, id: "Help" %> </li>
-                <li>  <%=link_to "contact", contact_path, id: "Contact" %></li>
-                <% if logged_in? %>
-                    <li> <%= link_to "Profile", current_user %>
-                    <li> <%= link_to "Settings", "#" %> </li>
-                    <li> <%= link_to "Log Out", logout_path, method: "delete" %> </li>
-                <% else %>
-                    <li>  <%=link_to "log in", login_path, id: "log in" %></li>
-                    <li>  <%=link_to "signup", signup_path, id: "Signup" %></li>
-                <% end %>
-
-            </ul>
-        </nav>
-    </div>
-
-</header> -->
-
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <%= link_to "Mon appli qui déchire", root_path, id: "logo" %>
@@ -41,7 +15,7 @@
                         </a>
                     <ul class="dropdown-menu">
                         <li><%= link_to "Profile", current_user %></li>
-                        <li><%= link_to "Settings", "#" %></li>
+                        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                         <li class="divider"></li>
                         <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                     </ul>
@@ -52,7 +26,6 @@
                 <% end %>
             </ul>
         </nav>
-
+        
     </div>
-
 </header>
