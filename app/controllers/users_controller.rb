@@ -43,9 +43,9 @@ class UsersController < ApplicationController
         @users = User.paginate(page: params[:page])
     end
 
-    def method
+    def destroy
       User.find(params[:id]).destroy
-      flash[:success] = "T'CASSEE"
+      flash[:success] = "J'T CASSEE!!!!"
       redirect_to users_url
     end
 
