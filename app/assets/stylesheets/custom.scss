@@ -30,6 +30,7 @@ textarea {
 
 .center {
   text-align: center;
+  margin: auto;
   h1 {
     margin-bottom: 10px;
     color: blue;
@@ -187,6 +188,9 @@ input {
   }
 }
 
+.post{
+    width: 100%;
+}
 
 .checkbox {
   margin-top: -10px;
@@ -221,6 +225,7 @@ input {
 
 .microposts {
   list-style: none;
+  width: 100%;
   padding: 0;
   li {
     padding: 10px 0;
@@ -232,7 +237,7 @@ input {
   }
   .content {
     display: block;
-    margin-left: 60px;
+    margin: auto;
     img {
       display: block;
       padding: 5px 0;

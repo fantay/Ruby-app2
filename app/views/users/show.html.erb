@@ -3,11 +3,25 @@
 
 <h1>SHOW</h1>
 
-nom de l'util: <%= @user.name %><br>
-email de l'util: <%= @user.email %>
+<div class="center">
+    nom de l'util: <%= @user.name %><br>
+    email de l'util: <%= @user.email %>
 
-<p>
-    <!-- (byebug) @user.name "example User"
-    (byebug) @user.email  "example@toto.com"
-    (byebug params[:id] "1" -->
-</p>
+    <div class="center col-md-8 post">
+        <br/>
+
+        <% if @user.microposts.any? %>
+            <h3>microposts (<%= @user.microposts.count %>)</h3>
+            <%= will_paginate @microposts %>
+            <br/>
+
+            <ol class="center microposts">
+                <%= render @microposts %>
+            </ol>
+            
+            <%= will_paginate @microposts %>
+        <% end %>
+
+    </div>
+
+</div>
