@@ -6,18 +6,18 @@ class SessionsController < ApplicationController
     def create
         user = User.find_by(email: params[:session][:email].downcase)
 
-        if user
+        if user && user.authenticate(params[:session][:password])
             flash[:sucess] = "Sa marche, #{user.name}"
-            log_in user
-            if params[:session][:remember_me] == '1'
-                remember(user)
+            if user.activated?
+                log_in user
+                params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+                redirect_to user
             else
-                forget(user)
+                message = "Ta fais de la MERDE !!!!!"
+                message += "Check your mail"
+                flash[:warning] = message
+                redirect_to root_url
             end
-            redirect_to user
-        else
-          flash.now[:danger] = "Ta fais de la MERDE !!!!!"
-          render 'new'
         end
     end
 

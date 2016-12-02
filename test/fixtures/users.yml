@@ -4,3 +4,4 @@ amon:
     name: Toutk Amon
     email: toutkamon@toto.com
     password_digest: <%= User.digest('mon_mot_de_passe') %>
+    activated: true
